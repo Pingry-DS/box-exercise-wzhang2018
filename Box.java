@@ -1,48 +1,35 @@
-public class Box<T> {
+public class Box {
 
   private T contents;
   private boolean isFull;
 
   // Make a new empty box
   public Box(){
-
   }
 
   // Make a new box pre-filled with contents
-  public Box(T contents){
-    this.contents = contents;
+  public Box(){
   }
 
   /**
    * Check the contents of the box
    */
-  public T getContents(){
-    return contents;
+  public getContents(){
   }
 
   /**
    * Tell whether the box is full or not
    */
-  public boolean isFull(){
-    return isFull;
+  public isFull(){
   }
 
   /**
    * Empty out the box, and give back hatever was in it
    */
-  public T empty(){
-    T junk = contents;
-    contents = null;
-    return junk;
+  public empty(){
   }
 
   public String toString(){
-    if(isFull()){
-      return "Box of " + getContents();
-    }
-    else {
-      return "Empty box";
-    }
   }
 
   public static void main(String[] args){
