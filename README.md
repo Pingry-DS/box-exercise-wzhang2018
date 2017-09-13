@@ -12,11 +12,14 @@ Authors
 License
 -------
 
+Tests
+-----
+
 Todo List
 ---------
 1. Implement all the methods
 2. Update all the javadoc
 3. Implement TODOs in main program
-3. Complete preceding sections of this README
-4. Remove this todo list
-5. (optional) Make an even more interesting main program
+4. Complete preceding sections of this README
+5. Remove this todo list
+6. (optional) Make an even more interesting main program
