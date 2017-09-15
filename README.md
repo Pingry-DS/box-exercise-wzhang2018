@@ -6,13 +6,13 @@ A simple data structure primarily for instructional purposes.
 Usage
 -----
 Compile with:
-'''
+```
 javac Box.java
-'''
-Run with
-'''
+```
+Run with:
+```
 java Box
-'''
+```
 
 Authors
 -------
