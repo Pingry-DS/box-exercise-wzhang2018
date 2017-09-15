@@ -43,11 +43,25 @@ public class Box <T> {
     return junk;
   }
 
+  /**
+   * Fill with contents and return true or return false if full.
+   * @param contents The contents to fill a box with
+   * @return False if box is already full or true if successfully filled
+   */
+  public boolean fill(T contents){
+    if (isFull){
+      return false;
+    }
+    this.contents = contents;
+    isFull = true;
+    return isFull;
+  }
+
   public String toString(){
     if(isFull)
-      return "This box contains " + contents + " .";
+      return "This box contains " + contents + ".";
     else
-      return "This box is empty";
+      return "This box is empty.";
   }
 
   public static void main(String[] args){
@@ -55,13 +69,12 @@ public class Box <T> {
     // Make two boxes
     Box<String> stringBox = new Box<String>();
     //TODO start the second box with contents inside
-    Box<Integer> intBox   = new Box<Integer>();
+    Box<Integer> intBox   = new Box<Integer>(21);
 
     // View contents (via toString method)
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
 
-    //TODO Add something to a box
-
+    stringBox.fill("ayy");
 
 
     // View contents (via toString method)
@@ -71,11 +84,10 @@ public class Box <T> {
 
 
     // View contents (via toString method)
-    System.out.println("The boxes contain: " + stringBox + ", " + intBox);
+    System.out.println("The boxes contain: " + stringBox.getContents() + ", " + intBox.getContents());
 
-    //TODO Empty a boxes
-
-
+    intBox.empty();
+    stringBox.empty();
 
     // View contents (via toString method)
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
