@@ -59,16 +59,15 @@ public class Box <T> {
 
   public String toString(){
     if(isFull)
-      return "This box contains " + contents + ".";
+      return contents.toString();
     else
-      return "This box is empty.";
+      return "empty box";
   }
 
   public static void main(String[] args){
 
     // Make two boxes
     Box<String> stringBox = new Box<String>();
-    //TODO start the second box with contents inside
     Box<Integer> intBox   = new Box<Integer>(21);
 
     // View contents (via toString method)
@@ -79,9 +78,6 @@ public class Box <T> {
 
     // View contents (via toString method)
     System.out.println("The boxes contain: " + stringBox + ", " + intBox);
-
-    //TODO Test your peek method
-
 
     // View contents (via toString method)
     System.out.println("The boxes contain: " + stringBox.getContents() + ", " + intBox.getContents());
